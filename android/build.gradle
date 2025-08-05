@@ -430,11 +430,15 @@ apply plugin: "maven-publish"
 apply plugin: "de.undercouch.download"
 
 android {
+    namespace "com.swmansion.reanimated"
     compileSdkVersion safeExtGet("compileSdkVersion", 30)
     if (REACT_NATIVE_MINOR_VERSION >= 71) {
         buildFeatures {
             prefab true
         }
+    }
+    buildFeatures {
+        buildConfig true
     }
     defaultConfig {
         minSdkVersion safeExtGet("minSdkVersion", 16)
