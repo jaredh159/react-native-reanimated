@@ -523,6 +523,11 @@ android {
         compileTask ->
             compileTask.dependsOn(packageNdkLibs)
     }
+    // https://github.com/software-mansion/react-native-reanimated/issues/4668#issuecomment-1732366297
+    tasks.withType(com.android.build.gradle.tasks.MergeSourceSetFolders) {
+        compileTask ->
+            compileTask.dependsOn(packageNdkLibs)
+    }
     configurations {
         extractHeaders
         extractSO
