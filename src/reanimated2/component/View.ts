@@ -1,6 +1,6 @@
 import { View } from 'react-native';
 import createAnimatedComponent from '../../createAnimatedComponent';
 
-const AnimatedView = createAnimatedComponent(View);
+const AnimatedView: any = createAnimatedComponent(View);
 
 export default AnimatedView;
